@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    background-image: url('../img/bghomeimg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.greeting {
+    background-color: #cf5353;
+    border-radius: 100px;
+    border: 4px solid #030398;
+    width: 55%;
+    margin: 10% auto;
+    transition: 0.5s;
+    opacity: 0.8;
+    background-image: url('../img/flag.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.greeting:hover {
+    opacity: 1;
+    transition: 0.5s;
+    transform: scale(105%);
+}
+.greeting-text {
+    text-align: center;
+    font-size: 50pt;
+    color: #769bff;
+    text-shadow: 4px 2px 1px black;
+}
+.header {    
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 10px;
+}
+.header-el {
+    padding: 5px 10px;
+    border-radius: 100px;
+    text-shadow: 1px 0.5px 0.5px black;
+    font-size: 20pt;
+    background-color: #cf5353;
+    border: 2px solid #030398;
+    list-style: none;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.header-el:hover {
+    opacity: 1;
+    transition: 0.5s;
+    transform: scale(105%);
+}
+.header-el-url {
+    text-decoration: none;
+    color: blue;
+}
+@media(min-width: 320px) {
+
+}
+@media(min-width: 600px) {
+
+}
+@media(min-width: 1024px) {
+
+}

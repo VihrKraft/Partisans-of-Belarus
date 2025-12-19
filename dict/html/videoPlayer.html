@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Плеер</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../videoPlayerStyles/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../videoPlayerStyles/css/style.css">
+  <link rel="icon" href="../img/ico.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <ul class="header-block">
+      <a class="header-el-url" href="home.html"><li class="header-el">На титульную</li></a>
+      <a class="header-el-url" href="main.html"><li class="header-el">На главную</li></a>
+      <a class="header-el-url" href="partisans.html"><li class="header-el">10 самых известных партизан</li></a>
+      <a class="header-el-url" href="videoPlayer.html"><li class="header-el">Видеоплеер</li></a>
+    </ul>
+  </header>
+
+  <div id="player" class="player">
+    <div class="js-video-container video-container"></div>
+    <div class="buttons_block">
+      <div class="left-buttons">
+        <button class="js-play-button player-button play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
+        <button class="js-pause-button player-button play-button" hidden><i class="fa fa-pause" aria-hidden="true"></i></button>
+        <button class="js-volume-button player-button sound-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+        <button class="js-mute-button player-button sound-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      </div>
+      
+      <div class="viewing-panel">
+        <span class="js-current-time current-time"></span>
+        <div class="js-progress progress">
+          <div class="js-progress-slider progress-slider"></div>
+          <div class="circle"></div>
+        </div>
+        <span class="js-duration duration"></span>
+      </div>
+      
+      <div class="right-buttons">
+        <button class="js-fullscreen-button player-button fullscreen-button"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <h3 class="footer-title">
+      Выполнил учащийся БГУИР филиал МРК группы 5к9391 Нефедов С.А.
+      <hr class="footer-title-line">
+    </h3>
+    <ul class="footer-list">
+      <li class="footer-list-el"><a href="https://t.me/VihrKraft" class="footer-list-el-url">Я в Telegram</a></li>
+      <li class="footer-list-el"><a href="https://mrk.bsuir.by/ru/?yandex-source=desktop-maps" class="footer-list-el-url">Сайт колледжа</a></li>
+      <li class="footer-list-el"><a href="" class="footer-list-el-url">Код сайта</a></li>
+    </ul>
+    <div class="footer-date">
+      2025г
+    </div>
+  </footer>
+
+  <a class="but-up" href="videoPlayer.html">Наверх</a>
+  
+  <script src="../js/buttonUp.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/playable.bundle.min.js"></script>
+  <script src="../js/player.js"></script>
+
+  <script type="text/javascript">
+    createPlayer({elementId: 'player'});
+  </script>
+
+</body>
+</html>
