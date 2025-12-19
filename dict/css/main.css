@@ -54,9 +54,7 @@ header {
 }
 .title {
     background-color: #006208;
-    margin: 125px 20vw;
     padding: 0.04px;
-    font-size: 15pt;
     color: #cfcfcf;
     opacity: 0.97;
     text-align: center;
@@ -72,18 +70,13 @@ header {
     transition: 0.3s;
 }
 main {
-    margin: 20% 10% 5% 10%;
-    padding: 1px 10px 10px 10px;
     background-color: #006208;
     color: #cfcfcf;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
     opacity: 0.97;
     border: 3px solid #cfcfcf;
 }
 .main-text {
     text-indent: 30px;
-    font-size: 14pt;
     text-align: justify;
     transition: 0.3s;
 }
@@ -93,7 +86,6 @@ main {
 }
 .main-list {
     margin-left: 45px;
-    font-size: 14pt;
 }
 .main-list-el-url {
     color: #cfcfcf;
@@ -113,7 +105,6 @@ main {
     text-decoration: underline;
 }
 .main-subtitle {
-    font-size: 18pt;
     transition: 0.3s;
     text-indent: 30px;
     display: inline-block;
@@ -126,7 +117,6 @@ main {
     transition: 0.3s;
 }
 .main-subtitle-subline {
-    width: 30%;
     margin-left: 0;
 }
 .main-title-subline {
@@ -134,7 +124,6 @@ main {
 }
 .main-title {
     text-align: center;
-    font-size: 25pt;
     transition: 0.3s;
 }
 .main-title:hover {
@@ -144,7 +133,6 @@ main {
 .left {
     float: left;
     background-repeat: no-repeat;
-    height: 400px;
     margin-right: 15px;
     border: dotted 2px #cfcfcf;
     transition: 0.3s;
@@ -157,7 +145,6 @@ main {
 .right {
     float: right;
     background-repeat: no-repeat;
-    height: 400px;
     margin-left: 15px;
     border: dotted 2px #cfcfcf;
     transition: 0.3s;
@@ -169,12 +156,11 @@ main {
 }
 .floating-img {
     position: relative;
-    bottom: -5px;
     left: -20px;
 }
 footer{
     background-color: black;
-    height: 40vh;
+    min-height: 40vh;
     padding: 10px;
     color: #cfcfcf;
 }
@@ -206,7 +192,6 @@ footer{
 }
 .footer-date {
     float: right;
-    margin: 100px 10px 0 10px;
     transition: 0.3s;
     border-left: 2px solid #cfcfcf;
     padding-left: 5px;
@@ -265,11 +250,129 @@ footer{
     transition: 0.3s ease-in;
 }
 @media(min-width: 320px) {
-
+    .header-block {
+        display: none;
+    }
+    .title {
+        margin: 10px 10vw;
+        font-size: 20pt;
+        width: 180vw;
+    }
+    main {
+        width: 180vw;
+        margin: 100% 8vw 5% 8vw;
+        padding: 1px 10px 10px 10px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .main-text {
+        font-size: 20pt;
+    }
+    .main-title {
+        font-size: 24pt;
+    }
+    .main-subtitle {
+        font-size: 22pt;
+    }
+    .right {
+        max-height: 350px;
+        max-width: 350px;
+    }
+    .left {
+        max-height: 350px;
+        max-width: 350px;
+        background-size: cover;
+    }
+    .floating-img {
+        bottom: 5px;
+        display: none;
+    }
+    .main-subtitle-subline {
+        width: 250px;
+    }
+    .main-list-el-url {
+        font-size: 20pt;
+    }
+    li {
+        font-size: 20pt;
+    }
+    .main-list-el {
+        margin-left: -40px;
+    }
+    footer {
+        width: 200vw;
+    }
+    .footer-date {
+        margin: -5% 3% 0 0;
+        font-size: 20pt;
+    }
+    .footer-title {
+        font-size: 20pt;
+        text-align: center;
+    }
 }
 @media(min-width: 600px) {
-
+    
 }
 @media(min-width: 1024px) {
-
+    .header-block {
+        display: flex;
+    }
+    .title {
+        font-size: 15pt;
+        width: 60vw;
+        margin: 125px 20vw;
+    }
+    main {
+        margin: 20% auto 5% auto;
+        padding: 1px 10px 10px 10px;
+        width: 80vw;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+    }
+    .main-text {
+        font-size: 14pt;
+    }
+    .main-title {
+        font-size: 25pt;
+    }
+    .main-subtitle {
+        font-size: 18pt;
+    }
+    .right {
+        height: 400px;
+        max-width: none;
+    }
+    .left {
+        height: 400px;
+        max-width: none;
+    }
+    .floating-img {
+        bottom: -5px;
+        display: block;
+    }
+    .main-subtitle-subline {
+        width: 30%;
+    }
+    .main-list-el-url {
+        font-size: 14pt;
+    }
+    li {
+        font-size: 14pt;
+    }
+    .main-list-el {
+        margin-left: 0;
+    }
+    footer {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .footer-date {
+        margin: 6% 3% 0 0;
+        font-size: 14pt;
+    }
+    .footer-title {
+        font-size: 16pt;
+        text-align: left;
+    }
 }
