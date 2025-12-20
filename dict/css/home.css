@@ -14,8 +14,6 @@ body {
     background-color: #cf5353;
     border-radius: 100px;
     border: 4px solid #030398;
-    width: 55%;
-    margin: 10% auto;
     transition: 0.5s;
     opacity: 0.8;
     background-image: url('../img/flag.png');
@@ -61,11 +59,37 @@ body {
     color: blue;
 }
 @media(min-width: 320px) {
-
+    .header {
+        display: none;
+    }
+    .greeting {
+        width: 90%;
+        margin: 40% auto;
+        border-radius: 30px;
+    }
+    .greeting-text {
+        font-size: 30pt;
+    }
 }
 @media(min-width: 600px) {
-
+    .greeting {
+        margin: 30% auto;
+        width: 80vw;
+    }
+    .greeting-text {
+        font-size: 30pt;
+    }
 }
 @media(min-width: 1024px) {
-
+    .header {
+        display: flex;
+    }
+    .greeting {
+        width: 60%;
+        margin: 10% auto;
+        border-radius: 100px;
+    }
+    .greeting-text {
+        font-size: 50pt;
+    }
 }
