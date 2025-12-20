@@ -87,10 +87,12 @@ main {
 .main-list {
     margin-left: 45px;
 }
+.main-list-el {
+    line-height: 30pt;
+}
 .main-list-el-url {
     color: #cfcfcf;
     transition: 0.3s;
-    text-decoration: none;
 }
 .ul-list {
     list-style: none;
@@ -176,6 +178,7 @@ footer{
 }
 .footer-list-el {
     transition: 0.3s;
+    text-indent: 0;
 }
 .footer-list-el:hover{
     transition: 0.3s;
@@ -192,6 +195,7 @@ footer{
 }
 .footer-date {
     float: right;
+    margin-bottom: 0;
     transition: 0.3s;
     border-left: 2px solid #cfcfcf;
     padding-left: 5px;
@@ -202,19 +206,16 @@ footer{
 }
 .audio-button {
     position: fixed;
-    float: left bottom;
     background-image: url('../img/play.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #bcbcbc;
     border-radius: 5px;
-    margin-left: 15px;
     width: 60px;
     height: 60px;
     cursor: pointer;
     transition: 0.3s;
-    border: 3px solid black;
-    bottom: 10vh;
+    border: 3px solid black;  
 }
 .audio-button:hover {
     background-color: #ffffff;
@@ -225,20 +226,17 @@ footer{
 }
 .but-up {
     position: fixed;
-    right: 20px;
-    bottom: -90px;    
     background-color: #bcbcbc;
     border: 3px solid black;
     transition: 0.3s;
     cursor: pointer;
     border-radius: 5px;
-    padding: 10px;
-    font-size: 16pt;
     text-align: center;
     text-decoration: none;
     color: #000000;
     text-shadow: none;
     visibility: hidden;
+    border-radius: 10px;
 }
 .but-up:hover {
     background-color: #ffffff;
@@ -254,13 +252,13 @@ footer{
         display: none;
     }
     .title {
-        margin: 10px 10vw;
+        width: 90vw;
+        margin: 10px 5vw;
         font-size: 20pt;
-        width: 180vw;
     }
     main {
-        width: 180vw;
-        margin: 100% 8vw 5% 8vw;
+        width: 90vw;
+        margin: 80% 5vw 5% 5vw;
         padding: 1px 10px 10px 10px;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
@@ -276,15 +274,13 @@ footer{
     }
     .right {
         max-height: 350px;
-        max-width: 350px;
+        max-width: 280px;
     }
     .left {
         max-height: 350px;
-        max-width: 350px;
-        background-size: cover;
+        max-width: 280px;
     }
     .floating-img {
-        bottom: 5px;
         display: none;
     }
     .main-subtitle-subline {
@@ -292,29 +288,66 @@ footer{
     }
     .main-list-el-url {
         font-size: 20pt;
+        text-decoration: underline;
     }
     li {
         font-size: 20pt;
     }
-    .main-list-el {
-        margin-left: -40px;
-    }
     footer {
-        width: 200vw;
+        width: 100vw;
+        height: 70vh;
     }
     .footer-date {
-        margin: -5% 3% 0 0;
+        margin-right: 5px;
+        margin-top: 28%;
         font-size: 20pt;
     }
     .footer-title {
         font-size: 20pt;
         text-align: center;
     }
+    .but-up {
+        right: 5%;
+        bottom: -10vh;
+        padding: 20px;
+        font-size: 20pt;
+    }
+    .audio-button {
+        margin-left: 15px;
+        bottom: 5vh;
+        width: 80px;
+        height: 80px;
+    }
 }
 @media(min-width: 600px) {
-    
+    main {
+        width: 80vw;
+        margin: 70% auto 5% auto;
+    }
+    .main-title {
+        font-size: 26pt;
+    }
+    .footer {
+        height: 40vh;
+    }
+    .footer-date {
+        font-size: 20pt;
+        margin-top: 19%;
+        margin-right: 8px;
+    }
+    .right {
+        max-height: 300px;
+        max-width: 250px;
+    }
+    .left {
+        max-height: 300px;
+        max-width: 250px;
+    }
 }
 @media(min-width: 1024px) {
+    .main-list-el {
+        margin-left: -40px;
+    }
     .header-block {
         display: flex;
     }
@@ -325,10 +358,7 @@ footer{
     }
     main {
         margin: 20% auto 5% auto;
-        padding: 1px 10px 10px 10px;
         width: 80vw;
-        border-top-right-radius: 100px;
-        border-top-left-radius: 100px;
     }
     .main-text {
         font-size: 14pt;
@@ -339,23 +369,12 @@ footer{
     .main-subtitle {
         font-size: 18pt;
     }
-    .right {
-        height: 400px;
-        max-width: none;
-    }
-    .left {
-        height: 400px;
-        max-width: none;
-    }
-    .floating-img {
-        bottom: -5px;
-        display: block;
-    }
     .main-subtitle-subline {
         width: 30%;
     }
     .main-list-el-url {
         font-size: 14pt;
+        text-decoration: none;
     }
     li {
         font-size: 14pt;
@@ -368,11 +387,32 @@ footer{
         width: 100%;
     }
     .footer-date {
-        margin: 6% 3% 0 0;
+        margin-top: 20%;
+        margin-right: 8px;
         font-size: 14pt;
     }
     .footer-title {
         font-size: 16pt;
         text-align: left;
+    }
+    .but-up {
+        padding: 10px;
+        font-size: 16pt;
+        right: 15px;
+        bottom: -10%;
+    }
+    .audio-button {
+        margin-left: 15px;
+        bottom: 5vh;
+        width: 60px;
+        height: 60px;
+    }
+    .right {
+        max-height: 400px;
+        max-width: none;
+    }
+    .left {
+        max-height: 400px;
+        max-width: none;
     }
 }
