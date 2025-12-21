@@ -11,7 +11,7 @@ body {
     text-shadow: 2px 2px 3px black;
     font-family: "Roboto", sans-serif;
 }
-header {
+.header {
     top: 0;
     height: 100px;
     width: 98%;
@@ -30,6 +30,10 @@ header {
     padding: 12px 0;
     opacity: 0.97;
     border: 3px solid #cfcfcf;
+}
+.header-top {
+    display: flex;
+    flex-direction: column;
 }
 .header-el {
     font-size: 20pt;
@@ -87,9 +91,6 @@ main {
 .main-list {
     margin-left: 45px;
 }
-.main-list-el {
-    line-height: 30pt;
-}
 .main-list-el-url {
     color: #cfcfcf;
     transition: 0.3s;
@@ -133,9 +134,7 @@ main {
     transition: 0.3s;
 }
 .left {
-    float: left;
     background-repeat: no-repeat;
-    margin-right: 15px;
     border: dotted 2px #cfcfcf;
     transition: 0.3s;
 }
@@ -145,9 +144,7 @@ main {
     z-index: 10;
 }
 .right {
-    float: right;
     background-repeat: no-repeat;
-    margin-left: 15px;
     border: dotted 2px #cfcfcf;
     transition: 0.3s;
 }
@@ -161,8 +158,9 @@ main {
     left: -20px;
 }
 footer{
+    position: relative;
     background-color: black;
-    min-height: 40vh;
+    width: 100vw;
     padding: 10px;
     color: #cfcfcf;
 }
@@ -194,7 +192,9 @@ footer{
     color: #cfcfcf;
 }
 .footer-date {
-    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
     margin-bottom: 0;
     transition: 0.3s;
     border-left: 2px solid #cfcfcf;
@@ -248,7 +248,82 @@ footer{
     transition: 0.3s ease-in;
 }
 @media(min-width: 320px) {
-    .header-block {
+    .header-button-on {
+        display: flex;
+        position: fixed;
+        cursor: pointer;
+        z-index: 10;
+        margin-left: 10px;
+    }
+    .header-button-on-content {
+        color: #cfcfcf;
+        width: 20px;
+        font-size: 40pt;
+        position: absolute;
+        display: inline-block;
+    }
+    .header-button-on-content::after {
+        content: "—";
+        position: absolute;
+        top: .7rem;
+        padding: 0;
+    }
+    .header-button-on-content::before {
+        content: "—";
+        position: absolute;
+        bottom: .7rem;
+        padding: 0;
+    }
+    .header-block-mobile {
+        display: flex;
+        background-color: #006208;
+        flex-direction: column;
+        z-index: 10;
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        left: -250px;
+        z-index: 15;
+        transition: 0.7s;
+        border-right: 2px solid #cfcfcf;
+    }
+    .header-block-mobile.active {
+        left: 0;
+    }
+    .header-mobile-list {
+        list-style: none;
+    }
+    .header-button-off {
+        cursor: pointer;
+        z-index: 20;
+    }
+    .header-button-off-content {
+        position: absolute;
+        color: #cfcfcf;
+        width: 20px;
+        font-size: 40pt;
+        right: 25px;
+    }
+    .header-button-off-content::before {
+        content: "—";
+        position: absolute;
+        transform: rotate(45deg);
+    }
+    .header-button-off-content::after {
+        content: "—";
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+    .header-el-url {
+        border-bottom: 2px solid #cfcfcf;
+        width: 200px;
+        display: inline-block;
+        position: relative;
+        left: -35px;
+        margin: 5px;
+        padding: 3px;
+    }
+    .header {
         display: none;
     }
     .title {
@@ -264,19 +339,26 @@ footer{
         border-top-left-radius: 30px;
     }
     .main-text {
-        font-size: 20pt;
+        font-size: 13pt;
     }
     .main-title {
-        font-size: 24pt;
+        font-size: 20pt;
     }
     .main-subtitle {
-        font-size: 22pt;
+        font-size: 18pt;
+    }
+    .ul-list-el {
+        margin-left: -60px;
     }
     .right {
+        margin: auto;
+        float: none;
         max-height: 350px;
         max-width: 280px;
     }
     .left {
+        margin: auto;
+        float: none;
         max-height: 350px;
         max-width: 280px;
     }
@@ -287,20 +369,17 @@ footer{
         width: 250px;
     }
     .main-list-el-url {
-        font-size: 20pt;
+        font-size: 13pt;
         text-decoration: underline;
     }
     li {
-        font-size: 20pt;
+        font-size: 13pt;
     }
     footer {
-        width: 100vw;
         height: 70vh;
     }
     .footer-date {
-        margin-right: 5px;
-        margin-top: 28%;
-        font-size: 20pt;
+        font-size: 14pt;
     }
     .footer-title {
         font-size: 20pt;
@@ -308,21 +387,25 @@ footer{
     }
     .but-up {
         right: 5%;
-        bottom: -10vh;
-        padding: 20px;
-        font-size: 20pt;
+        bottom: -85px;
+        padding: 10px;
+        font-size: 16pt;
     }
     .audio-button {
         margin-left: 15px;
-        bottom: 5vh;
-        width: 80px;
-        height: 80px;
+        bottom: 15px;
+        width: 50px;
+        height: 50px;
     }
 }
 @media(min-width: 600px) {
     main {
         width: 80vw;
-        margin: 70% auto 5% auto;
+        margin: 50% auto 5% auto;
+    }
+    .footer-title {
+        font-size: 16pt;
+        text-align: center;
     }
     .main-title {
         font-size: 26pt;
@@ -331,22 +414,41 @@ footer{
         height: 40vh;
     }
     .footer-date {
-        font-size: 20pt;
-        margin-top: 19%;
-        margin-right: 8px;
+        font-size: 16pt;
     }
     .right {
+        float: right;
+        margin-left: 15px;
         max-height: 300px;
         max-width: 250px;
     }
     .left {
+        float: left;
+        margin-right: 15px;
         max-height: 300px;
         max-width: 250px;
     }
 }
 @media(min-width: 1024px) {
+    .header-button-on {
+        display: none;
+    }
+    .header-mobile {
+        display: none;
+    }
+    .header {
+        display: block;
+    }
     .main-list-el {
         margin-left: -40px;
+    }
+    .header-el-url {
+        border-bottom: none;
+        display: inline;
+        position: static;
+        margin: 0;
+        padding: 0;
+        width: auto;
     }
     .header-block {
         display: flex;
@@ -379,16 +481,13 @@ footer{
     li {
         font-size: 14pt;
     }
-    .main-list-el {
+    .ul-list-el {
         margin-left: 0;
     }
     footer {
         margin-bottom: 0;
-        width: 100%;
     }
     .footer-date {
-        margin-top: 20%;
-        margin-right: 8px;
         font-size: 14pt;
     }
     .footer-title {

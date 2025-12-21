@@ -50,6 +50,7 @@ body {
     transition: 0.5s;
 }
 .header-el:hover {
+    background-color: #d76b6b;
     opacity: 1;
     transition: 0.5s;
     transform: scale(105%);
@@ -59,8 +60,94 @@ body {
     color: blue;
 }
 @media(min-width: 320px) {
+    .header-button-on {
+        top: -10px;
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .header-button-on-content {
+        color: #cfcfcf;
+        width: 20px;
+        font-size: 40pt;
+        position: absolute;
+        display: inline-block;
+    }
+    .header-button-on-content::after {
+        content: "—";
+        position: absolute;
+        top: .7rem;
+        padding: 0;
+    }
+    .header-button-on-content::before {
+        content: "—";
+        position: absolute;
+        bottom: .7rem;
+        padding: 0;
+    }
+    .header-block-mobile {
+        top: 0;
+        background-color: #c60000;
+        flex-direction: column;
+        z-index: 10;
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        left: -252px;
+        z-index: 15;
+        transition: 0.7s;
+        border-right: 2px solid #030398;
+    }
+    .header-block-mobile.active {
+        left: 0;
+    }
+    .header-mobile-list {
+        list-style: none;
+    }
+    .header-button-off {
+        cursor: pointer;
+        z-index: 20;
+    }
+    .header-button-off-content {
+        position: absolute;
+        color: #cfcfcf;
+        width: 20px;
+        font-size: 40pt;
+        right: 25px;
+    }
+    .header-button-off-content::before {
+        content: "—";
+        position: absolute;
+        transform: rotate(45deg);
+    }
+    .header-button-off-content::after {
+        content: "—";
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+    .header-el-url {
+        border-bottom: 2px solid #cfcfcf;
+        width: 200px;
+        display: inline-block;
+        position: relative;
+        left: -35px;
+        margin: 5px;
+        padding: 3px;
+        -webkit-text-stroke: 1px #cfcfcf;
+        font-weight: 800;
+    }
     .header {
         display: none;
+    }
+    .header-el {
+        border-radius: 10px;
+        font-size: 20pt;
+        background-color: #c60000;
+        border: none;
+    }
+    .header-el:hover {
+        background-color: #d40404;
     }
     .greeting {
         width: 90%;
@@ -74,22 +161,39 @@ body {
 @media(min-width: 600px) {
     .greeting {
         margin: 30% auto;
-        width: 80vw;
+        width: 60vw;
     }
     .greeting-text {
         font-size: 30pt;
     }
 }
 @media(min-width: 1024px) {
+    .header-button-on {
+        display: none;
+    }
+    .header-mobile {
+        display: none;
+    }
     .header {
         display: flex;
     }
+    .header-el-url {
+        border-bottom: none;
+        display: inline;
+        position: static;
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
     .greeting {
-        width: 60%;
-        margin: 10% auto;
+        width: 55vw;
+        margin: 5% auto;
         border-radius: 100px;
     }
     .greeting-text {
-        font-size: 50pt;
+        font-size: 45pt;
+    }
+    .header-el {
+        border-radius: 100px;
     }
 }
