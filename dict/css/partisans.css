@@ -257,7 +257,7 @@ footer{
     }
     .header-block-mobile {
         display: flex;
-        background-color: #006208;
+        background-color: #c00000;
         flex-direction: column;
         z-index: 10;
         position: fixed;
@@ -267,7 +267,7 @@ footer{
         top: 0;
         z-index: 15;
         transition: 0.7s;
-        border-right: 2px solid #cfcfcf;
+        border-right: 2px solid #000000;
     }
     .header-block-mobile.active {
         left: 0;
@@ -297,7 +297,7 @@ footer{
         transform: rotate(-45deg);
     }
     .header-el-url {
-        border-bottom: 2px solid #cfcfcf;
+        border-bottom: 2px solid black;
         width: 200px;
         display: inline-block;
         position: relative;

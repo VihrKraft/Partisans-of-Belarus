@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 ntg.classList.add('partisan');
                 ntg.style.display='block';
                 partisan.insertAdjacentElement('beforebegin', ntg);
-                partisan.addEventListener('click', function () {
-                    
-                }
             }
             else {
                 ntg.replaceWith(partisan);
