@@ -183,7 +183,7 @@ footer{
 .footer-date {
     position: absolute;
     bottom: 15px;
-    right: 15px;
+    right: 10px;
     margin-bottom: 0;
     transition: 0.3s;
     border-left: 2px solid #cfcfcf;
@@ -322,7 +322,7 @@ footer{
     }
     .partisan.active {
         top: 0;
-        max-height: 90vh;
+        max-height: 80vh;
     }
     .partisan.active .image {
         float: none;

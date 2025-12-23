@@ -352,6 +352,7 @@ footer{
     }
     .footer-date {
         font-size: 14pt;
+        right: 45px;
     }
     .footer-title {
         font-size: 16pt;

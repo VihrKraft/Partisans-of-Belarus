@@ -253,9 +253,9 @@ footer{
         display: flex;
         position: fixed;
         cursor: pointer;
-        top: 20px;
+        top: -10px;
         z-index: 10;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     .header-button-on-content {
         color: #cfcfcf;
@@ -491,6 +491,7 @@ footer{
     }
     .footer-date {
         font-size: 14pt;
+        right: 45px;
     }
     .footer-title {
         font-size: 16pt;
