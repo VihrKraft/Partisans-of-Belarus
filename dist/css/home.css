@@ -86,7 +86,7 @@ body {
     }
     .header-block-mobile {
         top: 0;
-        background-color: #c60000;
+        background-color: #ff3131;
         flex-direction: column;
         z-index: 10;
         position: fixed;
@@ -139,13 +139,14 @@ body {
     .header-el {
         border-radius: 10px;
         font-size: 20pt;
-        background-color: #c60000;
+        background-color: #ff3131;
         border: none;
         text-shadow: 2px 2px 3px black;
-        color: #769bff;;
+        color: #769bff;
+        font-weight: 900;
     }
     .header-el:hover {
-        background-color: #d40404;
+        background-color: #ff0000;
     }
     .greeting {
         width: 90%;
@@ -192,6 +193,7 @@ body {
         font-size: 45pt;
     }
     .header-el {
+        font-weight: normal;
         border-radius: 100px;
         background-color: #cf5353;
         border: 2px solid #030398;

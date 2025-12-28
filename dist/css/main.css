@@ -80,12 +80,12 @@ main {
     opacity: 0.97;
     border: 3px solid #cfcfcf;
 }
-.main-text {
+.figura {
     text-indent: 30px;
     text-align: justify;
     transition: 0.3s;
 }
-.main-text:hover {
+.figura:hover {
     opacity: 0.85;
     transition: 0.3s;
 }
@@ -116,12 +116,17 @@ main {
     margin-bottom: 0;
     margin-top: 5px;
 }
+
 .main-subtitle:hover {
     opacity: 0.85;
     transition: 0.3s;
 }
 .main-subtitle-subline {
     margin-left: 0;
+    color: #cfcfcf;
+    background-color: #cfcfcf;
+    border-color: #cfcfcf;
+    margin-top: 5px;
 }
 .main-title-subline {
     margin-top: -15px;
@@ -133,6 +138,13 @@ main {
 .main-title:hover {
     opacity: 0.85;
     transition: 0.3s;
+}
+.second-column {
+    border-left: 2px solid #cfcfcf;
+    padding-left: 10px;
+}
+.table-brigades {
+    border-collapse: collapse;
 }
 .left {
     background-repeat: no-repeat;
@@ -156,7 +168,6 @@ main {
 }
 .floating-img {
     position: relative;
-    left: -20px;
 }
 footer{
     position: relative;
@@ -340,7 +351,7 @@ footer{
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
     }
-    .main-text {
+    .figura {
         font-size: 13pt;
     }
     .main-title {
@@ -352,6 +363,9 @@ footer{
     .ul-list-el {
         margin-left: -60px;
     }
+    .table-brigades {
+        display: none;
+    } 
     .right {
         margin: auto;
         float: none;
@@ -418,6 +432,12 @@ footer{
     .footer-date {
         font-size: 16pt;
     }
+    .p-brigades {
+        display: none;
+    }
+    .table-brigades {
+        display: block;
+    }
     .right {
         float: right;
         margin-left: 15px;
@@ -461,10 +481,7 @@ footer{
         margin: 20% auto 5% auto;
         width: 80vw;
     }
-    .main-list-el {
-        margin-left: -40px;
-    }
-    .main-text {
+    .figura {
         font-size: 14pt;
     }
     .main-title {
@@ -516,5 +533,10 @@ footer{
     .left {
         max-height: 400px;
         max-width: none;
+    }
+    .floating-img {
+        display: block;
+        left: -20px;
+        bottom: -5px;
     }
 }

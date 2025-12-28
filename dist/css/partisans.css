@@ -102,7 +102,6 @@ main {
     transition: 0.3s;
     overflow-y: auto;
     z-index: 10;
-    top: 20vh;
     transform: scale(101%);
     opacity: 1;
     color: #cfcfcf;
@@ -116,13 +115,13 @@ body.active {
     transition: 0.3s;
     color: #cfcfcf;
 }
-.litle-biography.active {
+.termin.active {
     text-align: justify;
 }
-.active .litle-biography::after {
+.active .termin::after {
     content: "";
 }
-.litle-biography::after {
+.termin::after {
     content: "...";
 }
 .unvisible-part-biography {
@@ -321,8 +320,8 @@ footer{
         margin: 5px;
     }
     .partisan.active {
-        top: 0;
         max-height: 80vh;
+        top: 0;
     }
     .partisan.active .image {
         float: none;
@@ -397,11 +396,13 @@ footer{
         margin: 10px;
     }
     .partisan.active {
-        width: 1000px;
+        top: 10vh;
+        width: 900px;
         max-height: 75vh;
     }
     .partisan.active .image {
         float: left;
+        margin-left: 0;
     }
     footer {
         margin-bottom: 0;
